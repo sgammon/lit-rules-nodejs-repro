@@ -1,0 +1,20 @@
+load(
+    "@npm//@bazel/typescript:index.bzl",
+    "ts_library",
+)
+
+exports_files([
+    "tsconfig.json",
+])
+
+ts_library(
+    name = "index",
+    srcs = ["src/index.ts"],
+    deps = [
+      "@npm//lit",
+      "@npm//lit-element",
+      "@npm//lit-html",
+      "@npm//tslib",
+    ],
+)
+
